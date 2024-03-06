@@ -1,0 +1,37 @@
+!=======================================================================
+!  MODULE CSMVersion
+!  07/05/2018 CV  Written
+!=======================================================================
+
+      MODULE CSMVersion
+!     Contains defintion of version and branch which will be
+!     used throughout the model.
+
+!=======================================================================
+
+!     Global CSM Version Number
+      TYPE VersionType
+        INTEGER :: Major = @MAJOR@
+        INTEGER :: Minor = @MINOR@
+        INTEGER :: Model = @MODEL@
+        INTEGER :: Build = @BUILD@
+      END TYPE VersionType
+      TYPE (VersionType) Version
+      CHARACTER(len=*), PARAMETER :: VBranch = '-@BRANCH@'
+
+!     Version history:
+!       4.8.2.0   FO 2023-09-02 v4.8.2 Release 2023
+!       4.8.1.0   FO 2022-10-28 v4.8.1 Interim release 2022
+!       4.8.0.1  chp 2020-07-21 v4.8 (=v4.7.5.14)
+!       4.7.5.0  chp 2018-12-18 Pre-release version
+!       4.7.2.0  chp 2018-05-07 v4.7.2 Release 2018 Workshop
+!       4.7.1.0  chp 2017-10-27 v4.7.1 Release
+!       4.7.0.0  chp 2017-08-09 v4.7.0 Release
+!       4.6.5.1  chp 2017-05-10 v4.6.5 Release 2017 Workshop  
+!       4.6.0.1  chp 2011-06-28 v4.6.0 Release
+!       4.5.1.0  chp 2010-10-10 v4.5.1 Release
+!       4.0.2.0  chp 2005-08-11 v4.0.2 Release
+!       4.0.1.0  chp 2004-01-28 v4.0.1 Release 
+!=======================================================================
+      END MODULE CSMVersion
+
